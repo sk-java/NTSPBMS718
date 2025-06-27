@@ -1,0 +1,10 @@
+package com.sk.sbeans;
+
+import java.time.LocalDate;
+
+public class SeasonFinder {
+	
+	private LocalDate date;
+	
+	
+}
