@@ -15,10 +15,22 @@ public class DependencyInjectionTest {
 		FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext(
 				"src/com/sk/cfgs/ApplicationContext.xml");
 
-		WishMessageGenerator res = (WishMessageGenerator) ctx.getBean("wmg");
+		Object obj = ctx.getBean("wmg");
 
+		WishMessageGenerator generator = (WishMessageGenerator) obj;
+		
+		System.out.println("-------------------------------");
+		System.out.println("Email: "+generator.getEmail());
+		System.out.println("Age: "+generator.getAge());
+		System.out.println("Today's Date: "+generator.getDate());
+		System.out.println("Current Time: "+generator.getTime());
+		System.out.println("-------------------------------");
+		
 		System.out.print("Enter your name : ");
-		System.out.println(res.getWishMessage(sc.next()));
+		String wishMessage = generator.getWishMessage(sc.next());
+		System.out.println(wishMessage);
+
+		ctx.close();
 
 	}
 

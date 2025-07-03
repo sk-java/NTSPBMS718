@@ -5,7 +5,13 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="ltime" class="java.time.LocalTime" factory-method="now" />
+	<bean id="ldate" class="java.time.LocalDate" factory-method="now" />
+	
 	<bean id="wmg" class="com.sk.beans.WishMessageGenerator">
 		<property name="time" ref="ltime"></property>
+		<property name="date" ref="ldate"></property>
+		<property name="age" value="21"></property>
+		<property name="email" value="santosh@gmail.com"></property>
 	</bean>
+	
 </beans>
