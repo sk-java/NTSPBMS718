@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.sk.main.SeasonFinderTest&apos; to &apos;DependencyInjectionMain&apos;&#x0D;&#x0A;- Original project: &apos;IOCProj2&apos;&#x0D;&#x0A;- Original element: &apos;com.sk.main.SeasonFinderTest&apos;&#x0D;&#x0A;- Renamed element: &apos;com.sk.main.DependencyInjectionMain&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;SeasonFinderTest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.sk.main{SeasonFinderTest.java[SeasonFinderTest" matchStrategy="1" name="DependencyInjectionMain" qualified="false" references="true" similarDeclarations="false" stamp="1750996416024" textual="false" version="1.0"/>
-</session>
