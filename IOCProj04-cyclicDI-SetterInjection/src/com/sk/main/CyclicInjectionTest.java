@@ -9,18 +9,19 @@ public class CyclicInjectionTest {
 
 	public static void main(String[] args) {
 
-		FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext(
-				"src/com/sk/cfgs/applicationContext.xml");
+		try (FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext(
+				"src/com/sk/cfgs/applicationContext.xml");) {
 
-		System.out.println("CyclicInjectionTest.main()");
-		
-		A a = (A) ctx.getBean("a1");
-		System.out.println("a=" + a);
-		System.out.println("================");
-		B b = (B) ctx.getBean("b1");
-		System.out.println("b=" + b);
+			System.out.println("CyclicInjectionTest.main()");
 
-		ctx.close();
+			A a = (A) ctx.getBean("a1");
+			System.out.println("a=" + a);
+			System.out.println("================");
+			B b = (B) ctx.getBean("b1");
+			System.out.println("b=" + b);
 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
